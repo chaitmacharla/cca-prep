@@ -1083,7 +1083,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 68, domain: 4, tier: 'intermediate',
-    text: 'You are building a multi-pass document review system: first pass extracts all claims, second pass verifies each claim against sources, third pass generates a credibility report. What architectural pattern does this represent?',
+    text: 'You are building a document review system with a few iterations: first iteration extracts all claims, second iteration verifies each claim against sources, third iteration generates a credibility report. What architectural pattern does this represent?',
     options: [
       'A standard validation retry loop that corrects schema errors on each pass',
       'Parallel decomposition where all dimensions are analyzed simultaneously',
