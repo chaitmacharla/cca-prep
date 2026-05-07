@@ -1038,7 +1038,7 @@ export const QUESTIONS: Question[] = [
   // INTERMEDIATE
   {
     id: 65, domain: 4, tier: 'intermediate',
-    text: 'You need to extract structured data from 50,000 product descriptions overnight. The downstream system ingests a batch file at 6 AM the next day. Which API approach is most appropriate?',
+    text: 'You need to extract structured data from 50,000 product descriptions overnight. The downstream system ingests a batch file at 6 AM the next day. Assume the batch job is submitted with sufficient lead time for completion. Which API approach is most appropriate?',
     options: [
       'Message Batches API — 50% cost savings with a 24-hour processing window',
       'Standard synchronous API with 50 parallel threads for maximum throughput',
@@ -1046,7 +1046,7 @@ export const QUESTIONS: Question[] = [
       'Standard API with prompt caching for repeated schema definition prefixes',
     ],
     correct: 0,
-    explanation: 'Overnight bulk processing with a next-morning deadline is the canonical Message Batches API use case: (1) latency-tolerant (deadline is tomorrow morning, not now), (2) non-interactive (no user waiting), (3) high volume (50k requests). The 50% cost savings on this volume is significant. Parallel synchronous requests would work but cost double and add infrastructure complexity. Note: the Batch API guarantees results within 24 hours but not by a specific wall-clock time. This scenario assumes sufficient lead time before the 6 AM cutoff.',
+    explanation: 'Overnight bulk processing with a next-morning deadline is the canonical Message Batches API use case: (1) latency-tolerant (deadline is tomorrow morning, not now), (2) non-interactive (no user waiting), (3) high volume (50k requests). The 50% cost savings on this volume is significant. Parallel synchronous requests would work but cost double and add infrastructure complexity.',
     refs: [
       { label: 'Message Batches API', url: 'https://platform.claude.com/docs/en/build-with-claude/batch-processing' },
     ],
